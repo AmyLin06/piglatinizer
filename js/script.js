@@ -2,10 +2,22 @@ $( "document" ).ready(function() { //this helps your jQuery to work. Write all o
 
   $("#button").click(function(){
       var input = $(".input").val();
-      $(".output").html(input);
+      pigWord(input);
   });
 
-
+function pigWord(pig){
+    let vowel = ["a" , "e" , "i" , "o" , "u"];
+    let firstLetter = pig[0];
+    let newword = pig.substring(0);
+    vowel.forEach(function(vowels){
+        if (firstLetter === vowels){
+            $(".output").html(newword + pig[0] + "ay")
+        }
+        else{
+            $(".output").html(pig + "ay")
+        }
+    });
+};
 
 
 
