@@ -1,6 +1,109 @@
-.container{
-    text-align:center;
+:root{
+    --font: 'Overpass Mono', monospace;
+    --bkgColor: #EC9D92;
+    --BoxColor: #BFA8A5;
+    --tagColor: white;
 }
-body{
-    background:pink;
+
+.fullscreen{
+    height: 100vh;
+}
+
+header{
+    background-color: var(--bkgColor);
+    display: flex;
+    font-family: var(--font);
+}
+
+#title{
+    width: 70%; 
+    padding-top: 70px;
+    padding-left: 20px;
+}
+#heading{
+    font-size: 100px;
+}
+
+#subheading{
+    font-size: 50px;
+}
+
+#sideTags > ul > li{
+    background-color: var(--tagColor);
+    margin: 50px 0px 30px 0px;
+    padding: 50px;
+    text-align: center;
+    font-size: 20px;
+    box-shadow: 0px 5px gray;
+}
+
+#sideTags > ul > li:hover{
+    font-size: 25px;
+    box-shadow: 0px 10px gray; 
+}
+
+/* CSS for the rules page */
+#rules{
+    background-color: var(--bkgColor);
+    display: flex;
+    font-family: var(--font);
+}
+
+#rulesHeading{
+    font-size: 70px;
+}
+
+#rulesDetails{
+    width: 70%;
+}
+
+#rulesDetails > section > h3{
+    font-size: 35px;
+}
+
+/*CSS for the translation page */
+#translationPage{
+    display: flex;
+    font-family: var(--font);
+}
+
+#translationBox, #rulesHeading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+#translateRecord{
+    background-color: var(--BoxColor);
+    width: 70%;
+    text-align: center;
+}
+
+#engToLat{
+    display: flex;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 60%;
+}
+
+#english, #piglatin, #engOutput, #latOutput{
+    width: 50%;
+}
+
+#translateSubheading{
+    display: flex;
+}
+
+.input{
+    width: 300px;
+    height: 40px;
+    font-family: var(--font);
+}
+
+button{
+    margin-top: 20px;
+    width: 100px;
+    font-family: var(--font);
 }

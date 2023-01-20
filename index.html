@@ -4,20 +4,81 @@
         <title> Pig Latinizer </title>
         <!-- Latest compiled and minified CSS -->
         <!-- Your CSS -->
-        <link type="text/css" rel="stylesheet" href="css/style.css" />
+        <link type="text/css" rel="stylesheet" href="css/style.css"/>
         <!-- jQuery -->
         <!-- Your jQuery and Javascript -->
         <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+        
         <script src="js/script.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300&display=swap" rel="stylesheet">
     </head>
 
     <body>
-       <div class="container">
-            <h1 class="heading">Piglatinizer</h1>
-            <input class="input" type="text" placeholder="Type some words here" />
-            <button id="button" type="submit">Go!</button>
 
-            <div class="output"></div>
+       <div class="container">
+            <header class="fullscreen">
+                <div id="title">
+                    <h1 id="heading">Pig Latinizer</h1>
+                    <h2 id="subheading">Translate English words to Pig Latin</h2>
+                </div>
+                <div id="sideTags" style="width: 30%">
+                    <ul style="list-style: none;">
+                        <li><a href="">Github</a></li>
+                        <li><a href="">LinkedIn</a></li>
+                        <li>Email: amylin1928@gmail.com</li>
+                    </ul>
+                </div>
+            </header>
+
+            <div id="translationPage" class="fullscreen">
+                <div id="translationBox">
+                    <input class="input" type="text" placeholder="Type a word here" required>
+                    <button id="button" type="submit">Translate</button>
+                </div>
+                <div id="translateRecord">
+                    <p style="font-size: 30px;">History</p>
+                    <div id="translateSubheading">
+                        <p id="english">English</p>
+                        <p id="piglatin">Pig Latin</p>
+                    </div>
+                    <div id="engToLat">
+                        <div id="engOutput"></div>
+                        <div id="latOutput"></div>
+                    </div>
+                    <button id="clearTranslation">Clear</button>
+                </div>
+            </div>
+            
+            <div id="rules" class="fullscreen">
+                <h2 id="rulesHeading">Pig Latin Rules</h2>
+                <div id="rulesDetails">
+                    <section id="vowelRules">
+                        <h3>Translate words beginning with vowels</h3>
+                        <ol>
+                            <li>Keep the word as normal. Do not change anything.</li>
+                            <li>Add "yay" at the end of the word.</li>
+                        </ol>
+                    </section>
+                    <section id="consonantRules">
+                        <h3>Translate words beginning with a consonant or consonant cluster</h3>
+                        <ol>
+                            <li>Move the consonant or consonant cluster from the start of the word to the end of the word.</li>
+                            <li>Add "ay" at the end of the word.</li>
+                        </ol>
+                    </section>
+                    <section id="yRule">
+                        <h3>Letter Y rule</h3>
+                        <ol>
+                            <li>If a word starts why the letter Y, it is treated as a consonant, and moved to the end of the word, following the usual rule.</li>
+                            <li>If the letter Y is the second letter in a two letter word, the first letter of the word is moved to the end of the word.</li>
+                            <li>If the letter Y is at the end of a consonant cluster, it is treated as a vowel, and does not move to the end of the word.</li>
+                        </ol>
+                    </section>
+                    <p>Learn more about <a href="https://en.wikipedia.org/wiki/Pig_Latin" target="_blank">Pig Latin</a>!</p>
+                </div>
+            </div>
+        </div>
+
  	</body>
 
 </html>
